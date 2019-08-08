@@ -1,0 +1,31 @@
+#Step towards understanding a new data set.  
+#This file takes a csv as input and ouputs number of unique values in each column of csv.  
+
+
+import numpy
+import csv
+import matplotlib.pyplot as plt 
+
+with open('Air_Quality_Measures_on_the_National_Environmental_Health_Tracking_Network.csv') as csv_file:
+	X_Data = csv.reader(csv_file, delimiter=',')
+		
+	Column_Names=next(X_Data)
+	ncol=len(next(X_Data))
+	unique_list=[[] for i in range(ncol)]
+	line_count = 0
+	for row in X_Data:
+		if line_count > 0:
+			for x in range(ncol):	#x is index of column		
+				if row[x] not in unique_list[x]:
+					unique_list[x].append(row[x])
+					line_count += 1
+		else:
+			line_count +=1
+	
+	for x in range(ncol):
+		print(f'{Column_Names[x]} has {len(unique_list[x])} Unique Values')
+		if len(unique_list[x])<20:
+			print(*unique_list[x],sep = ", ")
+		print (sep="\n")
+			
+
