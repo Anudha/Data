@@ -1,0 +1,38 @@
+#Step towards understanding a new data set.  
+#This file takes a csv as input and ouputs:
+# 1) data types of each column in csv 
+# 2) an x,y scatterplot for two columns, uses a 3rd column for marker color
+
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import seaborn as sb
+
+X_Data=pd.read_csv("Air_Quality_Measures_on_the_National_Environmental_Health_Tracking_Network.csv")
+print(X_Data.dtypes)
+
+MeasureId_Extract=pd.to_numeric(X_Data['MeasureId'])
+MeasureId_Extract=X_Data['MeasureId'].items()
+MeasureId_Extract=[x[1] for x in MeasureId_Extract]
+unique_list=[] 
+for k in range(len(MeasureId_Extract)):	
+	if MeasureId_Extract[k] not in unique_list:
+		unique_list.append(MeasureId_Extract[k])
+Style_D=unique_list
+U=list(range(len(Style_D)))
+for j in range(len(Style_D)):
+	temp1=Style_D[j]
+	temp2=U[j]		
+	for k in range(len(MeasureId_Extract)):	#k is index of row		
+		if MeasureId_Extract[k] ==temp1:
+			MeasureId_Extract[k]=temp2
+X_Data_Style=MeasureId_Extract
+
+sb.scatterplot(x="ReportYear", y="Value", hue=X_Data_Style, data=X_Data)
+plt.title('Air_Quality_Measures_on_the_National_Environmental_Health_Tracking_Network')
+plt.gca().legend().remove()
+plt.show()
+
+
