@@ -1,6 +1,5 @@
 # Data
-Data.gov provides large data sets to better understand the world we live in.  
-Here are some plots from a data set on air quality made using numpy, pandas, and seaborn libraries in python.
+Data.gov provides large data sets to better understand the world we live in.  Here is some discussion on the data for air quality.  
 
 High Ozone
 
