@@ -1,5 +1,5 @@
 # Data
-Data.gov provides large data sets to better understand the world we live in.  Some discussion on the data for air quality: 
+Data.gov provides large data sets to better understand the world we live in.  
 
 High Ozone
 
