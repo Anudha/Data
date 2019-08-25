@@ -8,7 +8,7 @@ High Ozone
 State FIPS is a unique identifier for each state. 
 
 Immediate conclusions:
-Most places see less than 3 months with high ozone.  In most places, number of days with high ozone is on a slow decline from late 90s to 2013.  
+Most places see less than 3 months with high ozone.  Number of days with high ozone is on a slow decline from late 90s to 2013.  
 
 Disadvantages:  A simple visual presents limited information.  The data set contains information which can be more efficiently captured by a better visual design.  
 
