@@ -4,7 +4,7 @@ Here are some plots from a data set on air quality made using numpy, pandas, and
 
 High Ozone
 
-![Image description](AQ_1.png) 
+![Image description](AQ_3.png) 
 
 State FIPS is a unique identifier for each state
 Seaborn library is used to make a scatter plot
