@@ -11,10 +11,17 @@ Data set: Number of days with high ozone, year
 Problem:  Can we use K-means clustering to generate categories of low, medium, high, and very high PM2.5 particle pollution levels
 Method:  K-means clustering, 4 centers 
 Data set1: Particle concentration, year
-Data set2: Particle concentration
-Conclusion:  Using an additional feature, year, changed the predicted clusters, in a way that does not work for categorization of pollution levels.  
+
 
 ![Image](AQ_6.png)
 
+Predicted clusters do now work for classifying pollution level.  So we try again by removing 1 feature, year.  
+
+
+Data set2: Particle concentration
+
+
 ![Image](AQ_7.png)
+
+
 
