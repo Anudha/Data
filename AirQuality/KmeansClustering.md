@@ -1,7 +1,9 @@
 Use K-means clustering to generate warning for air pollution
 
 Problem:  Can we use K-means clustering to generate categories of low, medium, high, and very high ozone levels
+
 Method:  K-means clustering, 4 centers 
+
 Data set: Number of days with high ozone, year
 
 
@@ -9,7 +11,9 @@ Data set: Number of days with high ozone, year
 
 
 Problem:  Can we use K-means clustering to generate categories of low, medium, high, and very high PM2.5 particle pollution levels
+
 Method:  K-means clustering, 4 centers 
+
 Data set1: Particle concentration, year
 
 
