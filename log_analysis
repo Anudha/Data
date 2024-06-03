@@ -1,0 +1,46 @@
+import pandas as pd
+import re
+
+log_pattern = re.compile(
+    r'(?P<ip>\S+) - - \[(?P<datetime>[^\]]+)\] "(?P<method>\S+) (?P<path>\S+) (?P<protocol>\S+)" (?P<status>\d{3}) (?P<size>\d+) "-" "(?P<user_agent>[^"]+)"'
+)
+
+# for ipv46 
+log_pattern2 = re.compile(
+    r'(?P<ip>\S+) - - \[(?P<datetime>[^\]]+)\] "(?P<method>\S+) (?P<path>\S+) (?P<protocol>\S+)" (?P<status>\d{3}) (?P<size>\d+) "(?P<referrer>[^"]+)" "(?P<user_agent>[^"]+)"'
+)
+
+log_pattern3 = re.compile(
+    r'(?P<ip>\S+) - - \[(?P<datetime>[^\]]+)\] "(?P<request>[^"]+)" (?P<status>\d{3}) (?P<size>\d+) "(?P<referrer>[^"]*)" "(?P<user_agent>[^"]*)"'
+)
+
+def parse_log(line):
+    
+    match = log_pattern.match(line)
+    if type(match)  != 're.Match':
+        match = log_pattern2.match(line)
+    if type(match)  != 're.Match':  
+        match = log_pattern3.match(line)
+        
+    log_data = match.groupdict()
+        
+    return log_data
+
+
+def read_file(file_path):
+    list_of_dicts=[]
+    with open(file_path, 'r') as file:
+            
+            for line in file:
+                print(line)
+                x = parse_log(line)
+                
+                list_of_dicts.append(x)
+
+    df = pd.DataFrame(list_of_dicts)
+    output_file = file_path.replace('.txt','.xlsx')
+    df.to_excel(output_file, index=False)
+
+
+file_path = 'web server log.txt'
+read_file(file_path)
