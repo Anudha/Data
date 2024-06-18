@@ -1,0 +1,26 @@
+
+[youtube] R1FQF8QG5Tw: Downloading webpage
+[youtube] R1FQF8QG5Tw: Downloading ios player API JSON
+[youtube] R1FQF8QG5Tw: Downloading player 590f65a6
+[youtube] R1FQF8QG5Tw: Downloading m3u8 information
+[info] Available formats for R1FQF8QG5Tw:
+ID  EXT   RESOLUTION FPS CH │   FILESIZE   TBR PROTO │ VCODEC          VBR ACODEC      ABR ASR MORE INFO
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+sb2 mhtml 48x27        0    │                  mhtml │ images                                  storyboard
+sb1 mhtml 80x45        0    │                  mhtml │ images                                  storyboard
+sb0 mhtml 160x90       0    │                  mhtml │ images                                  storyboard
+233 mp4   audio only        │                  m3u8  │ audio only          unknown             [hi] Default
+234 mp4   audio only        │                  m3u8  │ audio only          unknown             [hi] Default
+139 m4a   audio only      2 │    3.11MiB   49k https │ audio only          mp4a.40.5   49k 22k [hi] low, m4a_dash
+140 m4a   audio only      2 │    8.24MiB  129k https │ audio only          mp4a.40.2  129k 44k [hi] medium, m4a_dash
+251 webm  audio only      2 │    9.49MiB  149k https │ audio only          opus       149k 48k [hi] medium, webm_dash
+269 mp4   256x144     24    │ ~ 11.76MiB  185k m3u8  │ avc1.4D400C    185k video only
+160 mp4   256x144     24    │    4.82MiB   76k https │ avc1.4D400C     76k video only          144p, mp4_dash
+230 mp4   640x360     24    │ ~ 50.23MiB  789k m3u8  │ avc1.4D401E    789k video only
+134 mp4   640x360     24    │   22.23MiB  349k https │ avc1.4D401E    349k video only          360p, mp4_dash
+18  mp4   640x360     24  2 │ ≈ 30.41MiB  478k https │ avc1.42001E         mp4a.40.2       44k [hi] 360p
+605 mp4   640x360     24    │ ~ 37.02MiB  582k m3u8  │ vp09.00.21.08  582k video only
+232 mp4   1280x720    24    │ ~176.27MiB 2769k m3u8  │ avc1.4D401F   2769k video only
+136 mp4   1280x720    24    │   91.68MiB 1441k https │ avc1.4D401F   1441k video only          720p, mp4_dash
+270 mp4   1920x1080   24    │ ~358.05MiB 5625k m3u8  │ avc1.640028   5625k video only
+137 mp4   1920x1080   24    │  181.89MiB 2858k https │ avc1.640028   2858k video only          1080p, mp4_dash
