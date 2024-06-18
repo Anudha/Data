@@ -1,0 +1,19 @@
+Namespace(input='x.mp4', 
+model_name='realesr-animevideov3',
+output='results', 
+denoise_strength=0.5, 
+outscale=2.0, 
+suffix='outx2', 
+tile=0, 
+tile_pad=10, 
+pre_pad=0, 
+face_enhance=False, 
+fp32=False, 
+fps=None, 
+ffmpeg_bin='ffmpeg', 
+extract_frame_first=False, 
+num_process_per_gpu=1, 
+alpha_upsampler='realesrgan', 
+ext='auto') 
+
+<class 'argparse.Namespace'>
