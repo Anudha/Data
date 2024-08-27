@@ -1,0 +1,12 @@
+2023-08-21 12:34:56,789 http-nio-8080-exec-5 INFO [c.a.j.web.servlet.InternalServerInfoServlet] User 'admin' accessed the server info page.
+2023-08-21 12:35:02,123 http-nio-8080-exec-9 WARN [c.a.j.issue.search.providers.LuceneSearchProvider] Reindex required for 'PROJ-123'
+2023-08-21 12:35:15,567 http-nio-8080-exec-4 ERROR [c.a.j.web.servlet.InternalServerInfoServlet] Exception thrown while processing request for 'admin'
+java.lang.NullPointerException: null
+	at com.atlassian.jira.web.servlet.InternalServerInfoServlet.doGet(InternalServerInfoServlet.java:75)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	...
+2023-08-21 12:36:45,432 http-nio-8080-exec-2 INFO [c.a.j.issue.index.DefaultIndexManager] Reindexing completed successfully in 12 seconds.
+2023-08-21 12:37:01,234 http-nio-8080-exec-3 INFO [c.a.j.web.filters.accesslog.AccessLogFilter] "GET /secure/Dashboard.jspa HTTP/1.1" 200 12534ms "https://jira.example.com/login.jsp" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"
+2023-08-21 12:40:12,345 http-nio-8080-exec-8 DEBUG [c.a.j.plugin.PluginManager] Plugin 'com.example.custom-plugin' started successfully.
+2023-08-21 12:42:25,678 http-nio-8080-exec-7 INFO [c.a.j.web.servlet.IssueNavigatorServlet] User 'jdoe' searched for issues using JQL: project = PROJ AND status = "In Progress"
