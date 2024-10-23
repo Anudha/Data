@@ -1,0 +1,124 @@
+    PID TTY          TIME CMD
+      1 ?        00:28:23 systemd
+      2 ?        00:00:02 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+     11 ?        00:00:00 mm_percpu_wq
+     12 ?        00:00:00 rcu_tasks_kthread
+     13 ?        00:00:00 rcu_tasks_rude_kthread
+     14 ?        00:00:00 rcu_tasks_trace_kthread
+     15 ?        00:03:03 ksoftirqd/0
+     16 ?        00:09:18 rcu_preempt
+     17 ?        00:01:46 migration/0
+     18 ?        00:00:00 idle_inject/0
+     19 ?        00:00:00 cpuhp/0
+     20 ?        00:00:00 kdevtmpfs
+     21 ?        00:00:00 inet_frag_wq
+     23 ?        00:00:00 kauditd
+     24 ?        00:00:45 khungtaskd
+     26 ?        00:00:00 oom_reaper
+     27 ?        00:00:04 writeback
+     28 ?        00:26:55 kcompactd0
+     29 ?        00:00:00 ksmd
+     30 ?        00:00:00 khugepaged
+     31 ?        00:00:00 kintegrityd
+     32 ?        00:00:00 kblockd
+     33 ?        00:00:00 blkcg_punt_bio
+     34 ?        00:00:00 tpm_dev_wq
+     35 ?        00:00:00 ata_sff
+     36 ?        00:00:00 md
+     37 ?        00:00:00 md_bitmap
+     38 ?        00:00:00 edac-poller
+     39 ?        00:00:00 devfreq_wq
+     40 ?        00:00:00 watchdogd
+     42 ?        02:54:40 kswapd0
+     43 ?        00:00:00 ecryptfs-kthread
+     44 ?        00:00:00 kthrotld
+     45 ?        00:00:00 acpi_thermal_pm
+     46 ?        00:00:00 scsi_eh_0
+     47 ?        00:00:00 scsi_tmf_0
+     48 ?        00:00:00 scsi_eh_1
+     49 ?        00:00:00 scsi_tmf_1
+     52 ?        00:00:00 mld
+     53 ?        00:00:00 ipv6_addrconf
+     60 ?        00:00:00 kstrp
+     62 ?        00:00:00 kworker/u3:0
+     66 ?        00:00:00 charger_manager
+    109 ?        00:00:00 cryptd
+    125 ?        00:00:00 scsi_eh_2
+    129 ?        00:00:00 scsi_tmf_2
+    130 ?        00:00:00 scsi_eh_3
+    134 ?        00:00:00 scsi_tmf_3
+    135 ?        00:00:00 scsi_eh_4
+    136 ?        00:00:00 scsi_tmf_4
+    137 ?        00:00:00 scsi_eh_5
+    138 ?        00:00:00 scsi_tmf_5
+    139 ?        00:00:00 scsi_eh_6
+    140 ?        00:00:00 scsi_tmf_6
+    141 ?        00:00:00 scsi_eh_7
+    142 ?        00:00:00 scsi_tmf_7
+    143 ?        00:00:00 ttm
+    167 ?        00:00:00 raid5wq
+    211 ?        00:06:09 jbd2/sda-8
+    212 ?        00:00:00 ext4-rsv-conver
+    305 ?        00:00:00 kmpathd
+    306 ?        00:00:00 kmpath_handlerd
+    469 ?        00:00:00 cfg80211
+    560 ?        00:02:08 dbus-daemon
+    581 ?        00:01:35 systemd-logind
+    618 ttyS0    00:00:00 agetty
+    634 tty1     00:00:00 agetty
+    642 ?        00:00:00 unattended-upgr
+    888 ?        00:00:00 tls-strp
+ 903561 ?        00:00:00 kworker/0:2H-kblockd
+1092568 ?        00:01:16 cron
+1092571 ?        00:00:08 polkitd
+1092572 ?        00:39:13 systemd-journal
+1092575 ?        00:04:46 haveged
+1092576 ?        00:00:00 uuidd
+1092581 ?        00:01:41 systemd-timesyn
+1092588 ?        00:00:00 upowerd
+1092592 ?        00:00:56 systemd-resolve
+1092596 ?        00:00:39 systemd-udevd
+1092600 ?        00:04:32 udisksd
+1092631 ?        00:01:14 systemd-network
+1764585 ?        00:10:17 sshd
+1888598 ?        00:08:31 apache2
+1888654 ?        00:05:03 htcacheclean
+2296757 ?        00:09:50 snapd
+2297310 ?        00:03:19 rsyslogd
+2302693 ?        00:09:35 fwupd
+2451913 ?        07:07:02 mysqld
+2610797 ?        00:00:01 systemd
+2610799 ?        00:00:00 (sd-pam)
+2610939 ?        00:00:03 tmux: server
+2610940 pts/1    00:00:00 bash
+2610955 pts/1    00:00:01 python3
+2611051 pts/3    00:00:00 bash
+2859591 pts/3    00:00:00 vi
+3287151 pts/2    00:00:00 bash
+3287176 pts/2    00:00:10 python3
+3315925 ?        00:00:17 kworker/0:0H-kblockd
+3670078 ?        00:00:45 containerd
+3670339 ?        00:00:12 dockerd
+3673527 ?        00:00:00 apache2
+3673528 ?        00:00:00 apache2
+3673529 ?        00:00:00 apache2
+3673530 ?        00:00:00 apache2
+3673531 ?        00:00:00 apache2
+3673532 ?        00:00:00 apache2
+3673654 ?        00:00:00 apache2
+3674563 ?        00:00:00 apache2
+3674564 ?        00:00:00 apache2
+3683719 ?        00:00:00 apache2
+3687456 ?        00:00:00 apache2
+3688243 ?        00:00:00 kworker/u2:3-events_power_efficient
+3692437 ?        00:00:00 kworker/u2:0-events_power_efficient
+3692579 ?        00:00:00 kworker/u2:4-flush-8:0
+3692595 ?        00:00:00 sshd
+3692676 pts/0    00:00:00 bash
+3696077 ?        00:00:00 kworker/0:2-events
+3696103 ?        00:00:00 kworker/0:0-cgroup_destroy
+3696186 pts/0    00:00:00 ps
