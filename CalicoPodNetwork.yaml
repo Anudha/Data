@@ -1,0 +1,104 @@
+# calico-network.yaml
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kube-system
+
+---
+# Create the necessary RBAC roles and bindings
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: calico-kube-controllers
+rules:
+  - apiGroups: [""]
+    resources:
+      - pods
+      - nodes/status
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups: ["apps"]
+    resources:
+      - deployments
+    verbs:
+      - get
+      - list
+      - watch
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: calico-kube-controllers
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: calico-kube-controllers
+subjects:
+  - kind: ServiceAccount
+    name: calico-kube-controllers
+    namespace: kube-system
+
+---
+# Calico's network component responsible for managing IP address allocations
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: calico-node
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      k8s-app: calico-node
+  template:
+    metadata:
+      labels:
+        k8s-app: calico-node
+    spec:
+      hostNetwork: true
+      containers:
+        - name: calico-node
+          image: calico/node:v3.19.1
+          env:
+            - name: DATASTORE_TYPE
+              value: "kubernetes"
+            - name: CALICO_NETWORKING_BACKEND
+              value: "bird"
+            - name: CLUSTER_TYPE
+              value: "k8s,bgp"
+          volumeMounts:
+            - name: var-run-calico
+              mountPath: /var/run/calico
+          securityContext:
+            privileged: true
+      volumes:
+        - name: var-run-calico
+          hostPath:
+            path: /var/run/calico
+
+---
+# Calico's control plane responsible for managing network policies
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calico-kube-controllers
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: calico-kube-controllers
+  template:
+    metadata:
+      labels:
+        k8s-app: calico-kube-controllers
+    spec:
+      containers:
+        - name: calico-kube-controllers
+          image: calico/kube-controllers:v3.19.1
+          env:
+            - name: DATASTORE_TYPE
+              value: "kubernetes"
